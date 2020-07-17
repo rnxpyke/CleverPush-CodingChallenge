@@ -1,19 +1,20 @@
-var bannerInteraction = false;
+// Tracks if the User already has interacted with the popup.
+var popupInteraction = false;
 
-
-function banners() {
-    return Array.from(document.getElementsByClassName("notify-banner"));
+// Helper fun
+function popups() {
+    return Array.from(document.getElementsByClassName("notify-popup"));
 }
 
 setTimeout(() => {
-    if (!bannerInteraction) {
-        banners().forEach(b => b.classList.remove("hidden"));
+    if (!popupInteraction) {
+        popups().forEach(b => b.classList.remove("hidden"));
     }
 }, 3000);
 
-function toggleBanner() {
-    bannerInteraction = true;
-    banners().forEach(b => b.classList.toggle("hidden"));
+function togglePopup() {
+    popupInteraction = true;
+    popups().forEach(b => b.classList.toggle("hidden"));
 }
 
 async function requestPush() {
@@ -27,6 +28,6 @@ async function requestPush() {
 }
 
 async function denyPush() {
-    bannerInteraction = true;
-    banners().forEach(b => b.classList.add("hidden"));
+    popupInteraction = true;
+    popups().forEach(b => b.classList.add("hidden"));
 }

@@ -14,7 +14,7 @@
     display: none;
 }
 
-.notify-banner {
+.notify-popup {
     padding: 1em;
     -webkit-box-shadow: 8px 8px 12px 0px rgba(145,145,145,1);
     -moz-box-shadow: 8px 8px 12px 0px rgba(145,145,145,1);
