@@ -28,7 +28,7 @@ async function requestPush() {
     if (perm === "granted") {
         var note = new Notification("Hello World!");
     } else {
-        console.error("user denied notification permission");
+        alert("Please allow us to show notifications by clicking on the icon in the URL bar and setting notifcations to allow");
     }
 }
 
