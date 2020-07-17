@@ -1,13 +1,22 @@
 .btn {
     border-radius: 50%;
-    background-color: #0066ff;
+    background-color: #b1ccda;
     font-size: 3em;
     padding: 8px;
     margin: 12px;
+    outline: 0;
+    border: 4px solid #a1bcca;
 }
 
-.btn:focus {
+.btn:hover {
+    background-color: #a1bcca;
+}
+
+.btn:active {
     outline: 0;
+    -webkit-box-shadow: inset 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 2px 2px 5px 0px rgba(0,0,0,0.75);
 }
 
 .hidden {

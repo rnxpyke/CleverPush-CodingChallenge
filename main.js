@@ -7,7 +7,7 @@ function popups() {
 }
 
 setTimeout(() => {
-    if (!popupInteraction && Notification.permission !== "default") {
+    if (!popupInteraction && !(Notification.permission !== "default")) {
         popups().forEach(b => b.classList.remove("hidden"));
     }
 }, 3000);
