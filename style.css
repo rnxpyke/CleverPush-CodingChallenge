@@ -1,0 +1,13 @@
+.btn {
+    border-radius: 50%;
+    background-color: #0066ff;
+    font-size: 3em;
+    padding: 8px;
+}
+
+.notify-banner {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    margin: 1em;
+}
