@@ -11,8 +11,12 @@
 		<div class="notify-popup hidden">
 			<form>
 				<p>Want to stay up to date on the latest news and updates?</p>
-				<button type="button" onClick="denyPush()">No, thanks</button>
-				<button type="button" onClick="requestPush()">Allow</button>
+				<ul class="btn-list">
+					<li> <button class="txt-btn deny" type="button" onClick="denyPush()">No, thanks</button>
+					</li>
+					<li> <button class="txt-btn allow" type="button" onClick="requestPush()">Allow</button>
+					</li>
+				</ul>
 			</form>
 		</div>
 		<button type="button" onClick="togglePopup()" class="material-icons btn">notifications</span>
