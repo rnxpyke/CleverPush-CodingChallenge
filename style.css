@@ -3,9 +3,21 @@
     background-color: #0066ff;
     font-size: 3em;
     padding: 8px;
+    margin: 12px;
+}
+
+.btn:focus {
+    outline: 0;
 }
 
 .notify-banner {
+    padding: 1em;
+    -webkit-box-shadow: 8px 8px 12px 0px rgba(145,145,145,1);
+    -moz-box-shadow: 8px 8px 12px 0px rgba(145,145,145,1);
+    box-shadow: 8px 8px 12px 0px rgba(145,145,145,1);
+}
+
+.notify-box {
     position: fixed;
     left: 0px;
     bottom: 0px;
