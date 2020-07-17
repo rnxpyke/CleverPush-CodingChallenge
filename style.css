@@ -10,6 +10,10 @@
     outline: 0;
 }
 
+.hidden {
+    display: none;
+}
+
 .notify-banner {
     padding: 1em;
     -webkit-box-shadow: 8px 8px 12px 0px rgba(145,145,145,1);
