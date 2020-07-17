@@ -1,6 +1,11 @@
 var bannerInteraction = false;
 
-
+setTimeout(() => {
+    if (!bannerInteraction) {
+        let banners = document.getElementsByClassName("notify-banner");
+        Array.from(banners).forEach(b => b.classList.remove("hidden"));
+    }
+}, 3000);
 
 function toggleBanner() {
     bannerInteraction = true;
