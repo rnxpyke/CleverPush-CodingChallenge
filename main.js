@@ -1,16 +1,19 @@
 var bannerInteraction = false;
 
+
+function banners() {
+    return Array.from(document.getElementsByClassName("notify-banner"));
+}
+
 setTimeout(() => {
     if (!bannerInteraction) {
-        let banners = document.getElementsByClassName("notify-banner");
-        Array.from(banners).forEach(b => b.classList.remove("hidden"));
+        banners().forEach(b => b.classList.remove("hidden"));
     }
 }, 3000);
 
 function toggleBanner() {
     bannerInteraction = true;
-    let banners = document.getElementsByClassName("notify-banner");
-    Array.from(banners).forEach(b => b.classList.toggle("hidden"));
+    banners().forEach(b => b.classList.toggle("hidden"));
 }
 
 async function requestPush() {
@@ -25,6 +28,5 @@ async function requestPush() {
 
 async function denyPush() {
     bannerInteraction = true;
-    let banners = document.getElementsByClassName("notify-banner");
-    Array.from(banners).forEach(b => b.classList.add("hidden"));
+    banners().forEach(b => b.classList.add("hidden"));
 }
