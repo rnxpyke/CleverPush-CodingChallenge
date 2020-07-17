@@ -7,7 +7,7 @@ function popups() {
 }
 
 setTimeout(() => {
-    if (!popupInteraction) {
+    if (!popupInteraction && Notification.permission !== "default") {
         popups().forEach(b => b.classList.remove("hidden"));
     }
 }, 3000);
@@ -18,7 +18,6 @@ function togglePopup() {
 }
 
 async function requestPush() {
-    console.log("allow");
     let perm = await Notification.requestPermission();
     if (perm === "granted") {
         var note = new Notification("Hello World!");
